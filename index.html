@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cursed Corridors 🚪</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
+    <style>
+        /* Body background color with padding */
+        body {
+            background-image: url('Assets/background.png'); /* Replace 'background.jpg' with your image file path */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-attachment: fixed; /* Fixed background to prevent scrolling */
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: #000000;
+        }
+
+        /* Add CSS styles for the topbar with margins */
+        .topbar {
+            background-color: #222; /* Slightly darker black color */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 10px; /* Rounded corners */
+            border: 2px solid #fff; /* White stroke (border) */
+            margin: 10px 0; /* Add margins to create space between the topbar and the body */
+            transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+        }
+
+        .topbar:hover {
+            transform: scale(1.05); /* Enlarge the topbar on hover */
+        }
+
+        .topbar a {
+            color: #ff0; /* Yellow hyperlink color */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out; /* Smooth color transition */
+        }
+
+        .topbar a:hover {
+            text-decoration: underline;
+            color: #ff9; /* Lighter yellow on hover */
+        }
+
+        /* Style for the "Home" section */
+        #home {
+            text-align: center; /* Center-align the text in the section */
+            color: #fff; /* Set text color to white */
+        }
+
+        #home h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Improved font for the heading */
+            font-size: 32px; /* Larger font size for the heading */
+            font-weight: bold;
+            margin-bottom: 10px; /* Add some spacing below the heading */
+        }
+
+        #home p {
+            font-size: 18px; /* Larger font size for the paragraph */
+            line-height: 1.6; /* Adjust line height for better readability */
+        }
+
+        /* Style for the "Play" section (initially hidden) */
+        #play,
+        #about,
+        #contact {
+            display: none; /* Hide the sections initially */
+            text-align: center;
+            color: #fff; /* Set text color to white */
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a href="#home" id="homeButton">Home</a>
+        <a href="#play" id="playButton">Play</a>
+        <a href="#about" id="aboutButton">About</a>
+        <a href="#contact" id="contactButton">Contact</a>
+        <a href="#socials" id="socialsButton">Socials</a>
+    </div>
+
+    <section id="home">
+        <h2>Home</h2>
+        <h1>Get started by selecting one of the options at the top</h1>
+        <p>Cursed Corridors is an immersive Roblox gaming experience that plunges you into the heart of a spine-tingling adventure. Step into a world filled with foreboding long corridors, where secrets lurk around every shadowed corner.</p>
+    </section>
+
+    <section id="play">
+        <h2>Play</h2>
+        <p>To try the experience out, <a href="https://www.roblox.com/games/14774053115" style="color: #ff0;">click here</a>.</p>
+    </section>
+
+    <section id="about">  
+      <h2>About</h2>  
+      <p>Descend into the mysterious depths of Cursed Corridors, a Roblox adventure like no other! Embark on a thrilling journey through a labyrinth of winding passages, where every twist and turn holds a new secret. Some rooms offer sanctuary and treasures, while others conceal dark and malevolent forces.
+      </p>
+      <p>Are you brave enough to face the unknown? Beware, for lurking within these cursed corridors are enigmatic entities, each with their own eerie tales to tell. With every step, you uncover a new layer of the game's haunting narrative.
+      </p>
+      <p>
+        Can you unlock the mysteries hidden within these cursed rooms? Prepare to challenge your wits, solve puzzles, and make choices that will shape your destiny. Cursed Corridors draws inspiration from "Doors"
+      </p>
+      <p>
+        Dare to enter Cursed Corridors, where the line between good and evil is as thin as the walls that confine you. Will you emerge victorious, or will you succumb to the darkness that awaits in the depths of these cursed halls? The choice is yours.
+      </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or feedback, feel free to message us <a href="https://discord.gg/DJtMSfNudX" style="color: #ff0;">on Discord</a>. We'd love to hear from you!</p>
+    </section>
+
+    <section id="socials">
+        <h2>Socials</h2>
+        <h1><a href="https://discord.gg/DJtMSfNudX" style="color: rgb(0, 26, 255);">Discord</a></h1>
+        <h1><a href="https://www.youtube.com/@iiHazami" style="color: rgb(133, 14, 14);">Youtube</a></h1>
+        <h1><a href="https://www.roblox.com/users/4606916080/profile" style="color: rgb(255, 255, 255);">Roblox</a></h1>
+    </section>
+
+    <script>
+        // JavaScript to show the corresponding section when its button is clicked
+        document.getElementById("homeButton").addEventListener("click", function() {
+            hideAllSections();
+            document.getElementById("home").style.display = "block";
+        });
+      
+        document.getElementById("playButton").addEventListener("click", function() {
+            hideAllSections();
+            document.getElementById("play").style.display = "block";
+        });
+
+        document.getElementById("aboutButton").addEventListener("click", function() {
+            hideAllSections();
+            document.getElementById("about").style.display = "block";
+        });
+
+        document.getElementById("contactButton").addEventListener("click", function() {
+            hideAllSections();
+            document.getElementById("contact").style.display = "block";
+        });
+
+        document.getElementById("socialsButton").addEventListener("click", function() {
+            hideAllSections();
+            document.getElementById("socials").style.display = "block";
+        });
+
+        function hideAllSections() {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("play").style.display = "none";
+            document.getElementById("about").style.display = "none";
+            document.getElementById("contact").style.display = "none";
+            document.getElementById("socials").style.display = "none";
+        }
+    </script>
+</body>
+</html>
